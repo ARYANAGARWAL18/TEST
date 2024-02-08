@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thala checker</title>
+</head>
+<body>
+
+    <h1>Thala checker</h1>
+
+    <label for="wordInput">Enter a word:</label>
+    <input type="text" id="wordInput" maxlength="7">
+    <button onclick="checkWord()">Check</button>
+
+    <p id="result"></p>
+
+    <!-- Video element for playing video -->
+    <video id="thalaVideo" width="320" height="240" controls>
+        <source src="C:\Users\agarw\Downloads\3b37a044.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        function checkWord() {
+            // Get the input value
+            var word = document.getElementById('wordInput').value;
+
+            // Check if the word has exactly 7 letters
+            if (word.length === 7) {
+                // Display "Thala"
+                document.getElementById('result').innerText = 'Thala for a reason';
+
+                // Play the video
+                document.getElementById('thalaVideo').play();
+            } else {
+                // Display a message if the word doesn't have 7 letters
+                document.getElementById('result').innerText = 'Thala nahi hai bhai.';
+            }
+        }
+    </script>
+
+</body>
+</html>
